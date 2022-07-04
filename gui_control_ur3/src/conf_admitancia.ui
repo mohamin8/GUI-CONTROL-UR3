@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Conf_admitancia</class>
+ <widget class="QDialog" name="Conf_admitancia">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>326</width>
+    <height>251</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configurar control de admitancia</string>
+  </property>
+  <widget class="QDoubleSpinBox" name="constante_c">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>16</y>
+     <width>69</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="wrapping">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="accelerated">
+    <bool>true</bool>
+   </property>
+   <property name="prefix">
+    <string/>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>0.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.010000000000000</double>
+   </property>
+   <property name="stepType">
+    <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="umbral_fx">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>56</y>
+     <width>69</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <double>1000.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="stepType">
+    <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="umbral_fy">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>96</y>
+     <width>69</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <double>1000.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="stepType">
+    <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="umbral_fz">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>136</y>
+     <width>69</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <double>1000.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="stepType">
+    <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>201</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Constante de amortiguación:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>61</y>
+     <width>201</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Umbral de fuerza X(N):</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>101</y>
+     <width>201</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Umbral de fuerza Y(N):</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>201</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Umbral de fuerza Z(N):</string>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="aceptar">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>215</y>
+     <width>175</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="lim_velocidad">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>176</y>
+     <width>69</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <double>100.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="stepType">
+    <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>201</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Límite de velocidad (m/s):</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="prefijoNuevo">
+    <file>1656236018993.png</file>
+    <file>1656163480524.png</file>
+    <file>1656163480689.png</file>
+    <file>1656163480829.png</file>
+    <file>1656163480958.png</file>
+    <file>1656163481118.png</file>
+    <file>1656163481247.png</file>
+    <file>1655993721814.png</file>
+    <file>d2e8ac40dc18011d5ecd890846f36ec1.png</file>
+    <file>477200.png</file>
+    <file>check-green.gif</file>
+  </qresource>
+  <qresource prefix="prefijoNuevo">
+    <file>check_green_lit.gif</file>
+  </qresource>
+</RCC>

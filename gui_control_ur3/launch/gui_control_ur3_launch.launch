@@ -1,0 +1,11 @@
+<!-- iniciar launch de driver desde python <include file="$(find ur3_moveit_config)/launch/move_group.launch" /> -->
+
+<launch>
+
+<!-- <include file="$(find gui_control_ur3)/launch/tfm_rviz.launch" /> -->
+<!-- <include file="$(find gui_control_ur3)/launch/tfm_rviz.launch" /> -->
+<node name="iniciar_calibrar_ur3" pkg="gui_control_ur3" type="iniciar_calibrar_ur3.py" output="screen" respawn="false"/>
+<node name="ejecutar_move_group" pkg="gui_control_ur3" type="ejecutar_move_group.py" output="screen" respawn="false"/>
+<node name="ejecutar_control" pkg="gui_control_ur3" type="ejecutar_control.py" output="screen" respawn="false"/>
+<node name="ventana_config" pkg="gui_control_ur3" type="ventana_config.py" output="screen" respawn="false"/>
+</launch>
