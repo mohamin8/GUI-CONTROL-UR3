@@ -13,37 +13,37 @@ Paso 2: Crear el espacio de trabajo
 
 El siguiente paso es crear el Workspace ejecutando los siguientes comandos en el terminal 
 
-$ source /opt/ros/noetic/setup.bash 
-$ mkdir -p ~/catkin_ws/src
-$ cd ~/catkin_ws/
-$ catkin_make
+	$ source /opt/ros/noetic/setup.bash 
+	$ mkdir -p ~/catkin_ws/src
+	$ cd ~/catkin_ws/
+	$ catkin_make
 
 Paso 3: Instalación del driver del UR3
 
 Como se ha comentado con anterioridad, este driver permite la conexión entre el pc y el robot. Todos los pasos a seguir para su correcta instalación se encuentran en el repositorio del driver https://github.com/UniversalRobots/Universal_Robots_ROS_Driver . En resumidas cuentas, hay que ejecutar los siguientes comandos:
 
-#source global ros
-$ source /opt/ros/<your_ros_version>/setup.bash
+	#source global ros
+	$ source /opt/ros/<your_ros_version>/setup.bash
 
-#create a catkin workspace
-$ mkdir -p catkin_ws/src && cd catkin_ws
+	#create a catkin workspace
+	$ mkdir -p catkin_ws/src && cd catkin_ws
 
-#clone the driver
-$ git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+	#clone the driver
+	$ git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
 
-#clone fork of the description. This is currently necessary, until the changes are merged upstream.
-$ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+	#clone fork of the description. This is currently necessary, until the changes are merged upstream.
+	$ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
 
-#install dependencies
-$ sudo apt update -qq
-$ rosdep update
-$ rosdep install --from-paths src --ignore-src -y
+	#install dependencies
+	$ sudo apt update -qq
+	$ rosdep update
+	$ rosdep install --from-paths src --ignore-src -y
 
-#build the workspace
-$ catkin_make
+	#build the workspace
+	$ catkin_make
 
-#activate the workspace (ie: source it)
-$ source devel/setup.bash
+	#activate the workspace (ie: source it)
+	$ source devel/setup.bash
 
 Paso 4: Configuración del UR3
 
@@ -52,24 +52,25 @@ Todo lo necesario para instalar y crear el programa de URCap se encuentra en htt
 
 Paso 5: Integración de la interfaz
 	
-	Es necesario introducir el paquete de la interfaz y control ‘gui_control_ur3’ dentro de la carpeta src del espacio de trabajo. Para posteriormente situado en el espacio de trabajo ejecutar catkin_make.
+Es necesario introducir el paquete de la interfaz y control ‘gui_control_ur3’ dentro de la carpeta src del espacio de trabajo. Para posteriormente situado en el espacio de trabajo ejecutar catkin_make.
 	
 Paso 6: Instalación de dependencias:
 
-	Puesto que se ha desarrollado la interfaz con PyQt, este software ha de ser instalado en el ordenador con los siguientes comandos:
+Puesto que se ha desarrollado la interfaz con PyQt, este software ha de ser instalado en el ordenador con los siguientes comandos:
 	
-		pip3 install --user pyqt5  
-		sudo apt-get install python3-pyqt5  
-		sudo apt-get install pyqt5-dev-tools
-		sudo apt-get install qttools5-dev-tools
+	pip3 install --user pyqt5  
+	sudo apt-get install python3-pyqt5  
+	sudo apt-get install pyqt5-dev-tools
+	sudo apt-get install qttools5-dev-tools
  	
-	Además, es necesario instalar otras dependencias para asegurar el correcto funcionamiento de la interfaz:
+Además, es necesario instalar otras dependencias para asegurar el correcto funcionamiento de la interfaz:
 	
-	Para obtener la IP:
-		sudo apt install net-tools
+Para obtener la IP:
+	sudo apt install net-tools
 
-	Para plotear:
-		pip install qtpy	
+Para plotear:
+	pip install qtpy
+	
 # Ejecución del programa
 Una vez instalado todo correctamente, se puede empezar a trabajar con la interfaz
 
